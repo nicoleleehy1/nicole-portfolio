@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { getProjectData } from '@/lib/projects';
 
 interface ProjectDetailProps {
   params: {
@@ -7,49 +8,6 @@ interface ProjectDetailProps {
   };
 }
 
-// This would typically come from a database or CMS
-const getProjectData = (id: string) => {
-  const projects = {
-    'project-1': {
-      id: 'project-1',
-      title: 'E-Commerce Platform',
-      technologies: ['React', 'TypeScript', 'Java', 'Spring Boot', 'PostgreSQL'],
-      description: 'A full-featured e-commerce platform with user authentication, product management, shopping cart, and payment processing.',
-      longDescription: `
-        This comprehensive e-commerce solution was built to handle high-traffic scenarios while maintaining excellent user experience. 
-        The frontend utilizes React with TypeScript for type safety and better developer experience, while the backend is powered by 
-        Java Spring Boot providing robust REST APIs.
-
-        Key features include user authentication with JWT tokens, advanced product filtering and search, real-time inventory management, 
-        secure payment processing with Stripe integration, and an admin dashboard for order and product management.
-
-        The application follows microservices architecture patterns and implements caching strategies for optimal performance.
-      `,
-      images: ['/project1-1.jpg', '/project1-2.jpg', '/project1-3.jpg'],
-      liveUrl: 'https://example-ecommerce.com',
-      githubUrl: 'https://github.com/yourusername/ecommerce-platform',
-      features: [
-        'User Authentication & Authorization',
-        'Product Catalog with Advanced Search',
-        'Shopping Cart & Wishlist',
-        'Secure Payment Processing',
-        'Order Management System',
-        'Admin Dashboard',
-        'Responsive Design',
-        'Real-time Notifications'
-      ],
-      challenges: [
-        'Implementing secure payment processing',
-        'Optimizing database queries for large product catalogs',
-        'Managing state across complex user interactions',
-        'Ensuring responsive design across all devices'
-      ]
-    },
-    // Add more projects here...
-  };
-
-  return projects[id as keyof typeof projects] || null;
-};
 
 export default function ProjectDetail({ params }: ProjectDetailProps) {
   const project = getProjectData(params.id);
@@ -70,8 +28,8 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white border-b">
-        <div className="max-w-4xl mx-auto px-6 py-8">
+      <div className="bg-white">
+        <div className="max-w-6xl mx-auto px-6 py-8">
           <Link 
             href="/projects" 
             className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6"
@@ -126,7 +84,7 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Project Images */}
         {project.images && project.images.length > 0 && (
           <div className="mb-12">

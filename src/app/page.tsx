@@ -20,14 +20,14 @@ export default function Home() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
 
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
         <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-xl font-semibold">Your Name</div>
           <div className="hidden md:flex space-x-8 text-sm">
-            <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
+            <a href="/projects" className="hover:text-blue-600 transition-colors nav-link">Projects</a>
             <a href="#work" className="hover:text-blue-600 transition-colors">Work</a>
             <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
           </div>
@@ -65,9 +65,6 @@ export default function Home() {
       </section>
 
         <ProjectDashboard />
-        <Link href="/projects" className="nav-link">
-          Projects
-        </Link>
 
         {/* <DraggableImage
           src="/hello-kitty-sticker.png"
