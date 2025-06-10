@@ -57,7 +57,7 @@ const ProjectDashboard: React.FC<ProjectDashboardProps> = ({ projects = [] }) =>
     },
     {
       id: 'project-7',
-      title: 'Webinet - Young Founders Summit Asia',
+      title: 'Webinet - Young Founders',
       technologies: ['React', 'TypeScript', 'Java'],
       description: 'E-commerce platform with payment integration'
     },
@@ -72,7 +72,7 @@ const ProjectDashboard: React.FC<ProjectDashboardProps> = ({ projects = [] }) =>
   const projectsToShow = projects.length > 0 ? projects : defaultProjects;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br p-8">
+    <div className="min-h-screen bg-gradient-to-br p-8 border-3 rounded-2xl">
       <div className="max-w-full mx-auto">
         {/* Header */}
         <h1 className="text-5xl font-bold text-black mb-12">
