@@ -10,6 +10,7 @@ import DraggableImage from "@/components/DraggableImage";
 import { ChevronDown } from 'lucide-react';
 import ExperiencesPage from '@/components/ExperiencesPage';
 import BasicInfo from '@/components/BasicInfo';
+import IntroCard from '@/components/IntroCard';
 
 
 
@@ -36,8 +37,31 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <Introduction />
-      <img src="basic-info-card.svg" alt="" />
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="1512" height="757" viewBox="0 0 1512 757" fill="none">
+          <path d="M1442.5 608.498C1488.11 602.088 1513 625.997 1513 625.997L1513 -1.42333e-06L-1.57607 -0.00329111L-1.57601 605.486C-1.57601 605.486 130.707 533.125 243.918 548.488C396.854 569.241 455.732 751.156 610.001 755.998C731.433 759.81 809.093 661.001 930.501 656.498C1039.53 652.455 1075.97 713.385 1185 709.498C1318.87 704.726 1354.8 620.824 1442.5 608.498Z" fill="#FFF5EC"/>
+      </svg>
+      
+      <div className='w-[1200px] h-[500px] border flex justify-start items-center'><IntroCard /></div>
+
+
+      {/* Intro Cards */}
+      <div className='flex gap-4'>
+        {/* Left column */}
+        <div className='flex flex-col gap-8 translate-x-[-50px]'>
+          <div className='w-[400px] hover:animate-shake'><img src="basic-info-card.svg" alt="" /></div>
+          <div className='w w-[400px] translate-x-[-15px]'><img src="quick-links.svg" alt="" /></div>
+        </div>
+
+        {/* Right column */}
+        <div className={`transition-all duration-1000 w-[540px] h-[700px] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-30'}`}>
+          <img src="socials-box.svg" alt="" />
+        </div>
+      </div>
+
+      
+      
+      
 
       <section className="pt-32 pb-20 px-6">
         

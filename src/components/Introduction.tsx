@@ -49,24 +49,24 @@ const Introduction: React.FC = () => {
           </div>
 
           {/* Image Gallery */}
-          <div className={`transition-all duration-1000 delay-300 
+          {/* <div className={`transition-all duration-1000 delay-300 
             ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'} `}>
-            <div className="grid grid-cols-3 gap-4 h-[600px]">
+            <div className="grid grid-cols-3 gap-4 h-[600px]"> */}
               {/* Column 1 */}
-              <div className="flex flex-col gap-4">
+              {/* <div className="flex flex-col gap-4">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-400 bg-gradient-to-br from-blue-100 to-purple-100 h-48">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20"></div>
                   <div className="absolute bottom-4 left-4 text-white font-semibold">Project Alpha</div>
-                </div>
+                </div> */}
                 
-                <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-green-100 to-teal-100 flex-1">
+                {/* <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-green-100 to-teal-100 flex-1">
                   <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-teal-500/20"></div>
                   <div className="absolute bottom-4 left-4 text-white font-semibold">Web App</div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Column 2 */}
-              <div className="flex flex-col gap-4">
+              {/* <div className="flex flex-col gap-4">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-orange-100 to-red-100 flex-1">
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20"></div>
                   <div className="absolute bottom-4 left-4 text-white font-semibold">Mobile Design</div>
@@ -75,10 +75,10 @@ const Introduction: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-blue-500/20"></div>
                   <div className="absolute bottom-4 left-4 text-white font-semibold">UI Kit</div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Column 3 */}
-              <div className="flex flex-col gap-4">
+              {/* <div className="flex flex-col gap-4">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-pink-100 to-rose-100 h-40">
                   <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-rose-500/20"></div>
                   <div className="absolute bottom-4 left-4 text-white font-semibold">Dashboard</div>
@@ -93,7 +93,9 @@ const Introduction: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+
+          
         </div>
       </div>
     </section>
