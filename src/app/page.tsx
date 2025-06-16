@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
 
 import Image from "next/image";
@@ -13,6 +14,8 @@ import { ChevronDown } from 'lucide-react';
 import ExperiencesPage from '@/components/ExperiencesPage';
 import BasicInfo from '@/components/BasicInfo';
 import IntroCard from '@/components/IntroCard';
+import AboutMe from '@/components/AboutMe';
+import TechStack from '@/components/TechStack';
 
 
 
@@ -20,9 +23,17 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
 
+  
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const [startTyping, setStartTyping] = useState(false);
+
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true); // Runs once when component mounts
+
+    if (inView) {
+      setStartTyping(true); // Triggers typing when section is in view
+    }
+  }, [inView]);
 
   return (
     <div className="min-h-screen w-full flex bg-[#9B3827]">
@@ -41,7 +52,7 @@ export default function Home() {
       </nav>
       
 
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative w-full min-h-[850px] overflow-hidden">
         {/* Background Image */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +79,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="w-1/2 w-[500px] h-[600px] flex justify-end items-center">
+          <div className="w-1/3 w-[500px] h-[600px] flex justify-end items-center">
             <motion.div
               initial={{ x: 1000 }}
               animate={{ x: 50 }}
@@ -86,20 +97,17 @@ export default function Home() {
       
 
 
-      {/* Intro Cards */}
-      <div className='flex gap-4'>
-        {/* Left column */}
-        <div className='flex flex-col gap-8 translate-x-[-50px]'>
-          <div className='w-[400px] hover:animate-shake'><img src="basic-info-card.svg" alt="" /></div>
-          <div className='w w-[400px] translate-x-[-15px]'><img src="quick-links.svg" alt="" /></div>
-        </div>
 
-        {/* Right column */}
-        <div className={`transition-all duration-1000 w-[540px] h-[700px] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-30'}`}>
-          <img src="socials-box.svg" alt="" />
-        </div>
+      <div className='flex'>
+        {/* Left Column */}
+        <div className='w-[1/3]'><AboutMe /></div>
+
+        {/* Right Column */}
+        <div className='w-[2/3]'><TechStack /></div>
+
       </div>
-
+      
+      
       
       
       
@@ -111,8 +119,8 @@ export default function Home() {
           <ChevronDown className="w-6 h-6 text-gray-400" />
         </div>
       </section>
-
-      <ProjectDashboard />
+      <div ref={ref}><ProjectDashboard startTyping={startTyping}/></div>
+      
       <ExperiencesPage />
 
         {/* <DraggableImage

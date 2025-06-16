@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import { TypeAnimation } from 'react-type-animation';
 
 interface Project {
   id: string;
@@ -14,9 +15,10 @@ interface Project {
 
 interface ProjectDashboardProps {
   projects?: Project[];
+  startTyping?: boolean;
 }
 
-const ProjectDashboard: React.FC<ProjectDashboardProps> = ({ projects = [] }) => {
+const ProjectDashboard: React.FC<ProjectDashboardProps> = ({ projects = [], startTyping }) => {
   // Default projects data if none provided
   const defaultProjects: Project[] = [
     {
@@ -72,12 +74,21 @@ const ProjectDashboard: React.FC<ProjectDashboardProps> = ({ projects = [] }) =>
   const projectsToShow = projects.length > 0 ? projects : defaultProjects;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br p-8 border-3 rounded-2xl">
+    <div className="min-h-screen bg-[#F9C6CF] bg-gradient-to-br p-8 rounded-2xl">
       <div className="max-w-full mx-auto">
         {/* Header */}
-        <h1 className="text-5xl font-bold text-black mb-12">
-          🖇️ Project Dashboard
+        <h1 className="!font-poppins text-5xl font-bold text-[#B61E1D] mb-12 pt-7 flex items-center gap-2">
+          🖇️
+          {startTyping && (
+            <TypeAnimation
+              sequence={['Project Dashboard']}
+              wrapper="span"
+              speed={50}
+              style={{ display: 'inline-block' }}
+            />
+          )}
         </h1>
+        
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
