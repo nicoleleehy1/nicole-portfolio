@@ -1,5 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -23,13 +25,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)] flex justify-center">
+    <div className="min-h-screen w-full flex bg-[#9B3827]">
       <main className="flex flex-col gap-8 items-center w-full max-w-9xl">
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+      <nav className="fixed top-0 w-full bg-black backdrop-blur-md border-gray-100 z-50">
         <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-xl font-semibold">Your Name</div>
+          <div className="text-xl font-semibold text-white">Nicole Lee</div>
           <div className="hidden md:flex space-x-8 text-sm">
             <a href="/projects" className="hover:text-blue-600 transition-colors nav-link">Projects</a>
             <a href="#work" className="hover:text-blue-600 transition-colors">Work</a>
@@ -37,12 +39,51 @@ export default function Home() {
           </div>
         </div>
       </nav>
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="1512" height="757" viewBox="0 0 1512 757" fill="none">
-          <path d="M1442.5 608.498C1488.11 602.088 1513 625.997 1513 625.997L1513 -1.42333e-06L-1.57607 -0.00329111L-1.57601 605.486C-1.57601 605.486 130.707 533.125 243.918 548.488C396.854 569.241 455.732 751.156 610.001 755.998C731.433 759.81 809.093 661.001 930.501 656.498C1039.53 652.455 1075.97 713.385 1185 709.498C1318.87 704.726 1354.8 620.824 1442.5 608.498Z" fill="#FFF5EC"/>
-      </svg>
       
-      <div className='w-[1200px] h-[500px] border flex justify-start items-center'><IntroCard /></div>
+
+      <div className="relative w-full h-full overflow-hidden">
+        {/* Background Image */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1512"
+          height="857"
+          viewBox="0 0 1512 757"
+          fill="none"
+          className="absolute top-0 left-0 w-full h-auto z-0"
+        >
+          <path
+            d="M1442.5 608.498C1488.11 602.088 1513 625.997 1513 625.997L1513 -1.42333e-06L-1.57607 -0.00329111L-1.57601 605.486C-1.57601 605.486 130.707 533.125 243.918 548.488C396.854 569.241 455.732 751.156 610.001 755.998C731.433 759.81 809.093 661.001 930.501 656.498C1039.53 652.455 1075.97 713.385 1185 709.498C1318.87 704.726 1354.8 620.824 1442.5 608.498Z"
+            fill="#FFF5EC"
+          />
+        </svg>
+
+        <div className="absolute inset-0 flex z-10">
+          <div className="w-1/2 h-[750px] flex justify-start items-center">
+            <motion.div
+              initial={{ x: -1000 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <IntroCard />
+            </motion.div>
+          </div>
+
+          <div className="w-1/2 w-[500px] h-[600px] flex justify-end items-center">
+            <motion.div
+              initial={{ x: 1000 }}
+              animate={{ x: 50 }}
+              transition={{ duration: 1 }}
+            >
+              <img src="socials-box.svg" alt="" />
+            </motion.div>
+          </div>
+        </div>
+
+        
+      </div>
+
+
+      
 
 
       {/* Intro Cards */}
@@ -86,4 +127,5 @@ export default function Home() {
       
     </div>
   );
-}
+};
+
