@@ -16,6 +16,8 @@ import BasicInfo from '@/components/BasicInfo';
 import IntroCard from '@/components/IntroCard';
 import AboutMe from '@/components/AboutMe';
 import TechStack from '@/components/TechStack';
+import ScrollingGallery from '@/components/ScrollingGallery';
+import Highlights from '@/components/Highlights';
 
 
 
@@ -37,7 +39,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full flex bg-[#9B3827]">
-      <main className="flex flex-col gap-8 items-center w-full max-w-9xl">
+      <main className="flex flex-col gap-4 items-center w-full max-w-9xl">
 
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-black backdrop-blur-md border-gray-100 z-50">
@@ -52,7 +54,7 @@ export default function Home() {
       </nav>
       
 
-      <div className="relative w-full min-h-[850px] overflow-hidden">
+      <div className="relative w-full min-h-[850px] border overflow-hidden">
         {/* Background Image */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,9 +96,7 @@ export default function Home() {
       </div>
 
 
-      
-
-
+    
 
       <div className='flex'>
         {/* Left Column */}
@@ -106,8 +106,12 @@ export default function Home() {
         <div className='w-[2/3]'><TechStack /></div>
 
       </div>
+
+      <div className=''></div>
+
+
       
-      
+      <Highlights />
       
       
       
@@ -121,7 +125,8 @@ export default function Home() {
       </section>
       <div ref={ref}><ProjectDashboard startTyping={startTyping}/></div>
       
-      <ExperiencesPage />
+      
+
 
         {/* <DraggableImage
           src="/hello-kitty-sticker.png"
