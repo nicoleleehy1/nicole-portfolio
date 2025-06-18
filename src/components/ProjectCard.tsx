@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           transition-all duration-300 ease-in-out
           ${isHovered ? 'transform scale-105 h-95 shadow-2xl' : ''}
           hover:shadow-2xl
-          min-w-[420px] max-w-[500px] w-full
+          min-w-[320px] max-w-[500px] w-full
         `}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

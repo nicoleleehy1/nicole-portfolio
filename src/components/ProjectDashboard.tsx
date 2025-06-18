@@ -74,14 +74,14 @@ const ProjectDashboard: React.FC<ProjectDashboardProps> = ({ projects = [], star
   const projectsToShow = projects.length > 0 ? projects : defaultProjects;
 
   return (
-    <div className="min-h-screen bg-[#F9C6CF] bg-gradient-to-br p-8 rounded-2xl">
-      <div className="max-w-full mx-auto">
+    <div className="min-h-screen bg-[#FFEBF0] bg-gradient-to-br p-8 rounded-2xl">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <h1 className="!font-poppins text-5xl font-bold text-[#B61E1D] mb-12 pt-7 flex items-center gap-2">
-          🖇️
+        <h1 className="!font-poppins text-5xl font-extrabold text-[#B61E1D] mb-12 pt-7 flex items-center gap-2">
+          📌
           {startTyping && (
             <TypeAnimation
-              sequence={['Project Dashboard']}
+              sequence={['Project Dashboard.']}
               wrapper="span"
               speed={50}
               style={{ display: 'inline-block' }}
