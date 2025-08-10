@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { TypeAnimation } from 'react-type-animation';
@@ -20,7 +20,6 @@ import ScrollingGallery from '@/components/ScrollingGallery';
 import Highlights from '@/components/Highlights';
 import Navbar from '@/components/Navbar';
 import ResizableBackground from '@/components/ResizableBackground';
-import Hero from '@/pages/Hero';
 
 
 
@@ -42,46 +41,48 @@ export default function Home() {
     }
   }, [inView]);
 
+
   return (
     <div className="min-h-screen w-full flex bg-[#470D03] relative">
-      
       <main
         style={{ position: "relative", zIndex: 1 }}
         className="flex flex-col gap-4 items-center w-full"
       >
-
-        <section
-          id="hero"
-          className="relative w-full min-h-[805px] overflow-visible pb-[350px]"
-        >
-
+        {/* HERO SECTION */}
+        <section id="hero" className="relative w-full min-h-[805px] overflow-visible pb-[350px]">
           <div className="relative w-full h-[750px]">
             <img
-              src="/intro-background.svg"
+              src="/intro/intro-background.svg"
               alt=""
               className="w-full h-full object-cover"
             />
 
-            {/* Intro Card positioned absolutely on top of image */}
-            <div className="absolute top-0 left-0 w-[65%] h-full flex items-center justify-start z-10">
-              <motion.div
-                initial={{ x: -1000 }}
-                animate={{ x: 0 }}
-                transition={{ duration: 1 }}
-              >
-                <IntroCard />
-              </motion.div>
+            {/* Intro Card + Image */}
+            <div className="absolute top-0 w-full h-full flex items-center justify-start z-10">
+              {/* IntroCard side */}
+              <div className="w-[65%] flex items-stretch">
+                <motion.div
+                  className="w-full h-full"
+                  initial={{ x: -1000 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 1 }}
+                >
+                  <IntroCard />
+                </motion.div>
+              </div>
+
+              {/* Image side */}
+              <div className="w-[35%] flex items-stretch justify-center mt-[-6rem]">
+                <img
+                  src="/headshot-cropped.jpg"
+                  alt="Headshot"
+                  className="object-cover object-center rounded-[10px] w-[80%] h-full"
+                />
+              </div>
             </div>
           </div>
-
         </section>
 
-
-
-      
-
-      
-      
       <section id="about" className='flex'>
         {/* ABOUT ME */}
         <div className='w-[1/3] pl-10'><AboutMe /></div>
