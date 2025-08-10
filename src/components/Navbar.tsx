@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
+import { siteMeta } from '../lib/siteMeta'
 
 type Theme = 'light' | 'dark';
 
@@ -38,22 +39,19 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
     const isLight = theme === "light";
 
   return (
-    <div className=''>
+    <div className='text-sm'>
         {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
             ? isLight
               ? 'bg-[#ffffff] backdrop-blur-sm shadow-lg'
-              : 'bg-[#000000] backdrop-blur-sm shadow-lg'
-            : 'bg-[#000000]'
+              : 'bg-[#470D03] backdrop-blur-sm shadow-lg'
+            : 'bg-[#010A08]'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-13">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-teal-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">P</span>
-              </div>
-              <span className={`font-semibold text-lg transition-colors ${
+              <span className={`!font-poppins font-semibold text-lg transition-colors ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               }`}>
                 Nicole Lee
@@ -61,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              {['Experience', 'Projects'].map((item) => (
+              {['About', 'Experience', 'Projects', 'Leadership'].map((item) => (
                 <a
                   key={item}
                   href={`${item.toLowerCase()}`}
@@ -72,9 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
                   {item}
                 </a>
               ))}
-              <button className="text-semibold bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-2 rounded-full hover:from-pink-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
-                Resume
-              </button>
+              <a href={siteMeta.resumePath} download className="ml-2 inline-block px-3 py-1 rounded-md border text-white">Resume</a>
             </div>
           </div>
         </div>
