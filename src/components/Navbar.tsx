@@ -8,6 +8,8 @@ interface NavbarProps {
     theme: Theme;
 }
 
+
+
 const Navbar: React.FC<NavbarProps> = ({ theme }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
@@ -59,18 +61,18 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              {['Experience', 'Projects', 'Blog', 'Contact'].map((item) => (
-                <button
+              {['Experience', 'Projects'].map((item) => (
+                <a
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  href={`${item.toLowerCase()}`}
                   className={`font-medium transition-colors ${
-                    isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+                    isScrolled ? 'text-gray-700 hover:text-pink-600' : 'text-white hover:text-pink-200'
                   }`}
                 >
                   {item}
-                </button>
+                </a>
               ))}
-              <button className="bg-gradient-to-r from-blue-600 to-teal-600 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105">
+              <button className="text-semibold bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-2 rounded-full hover:from-pink-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
                 Resume
               </button>
             </div>
