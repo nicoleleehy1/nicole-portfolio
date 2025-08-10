@@ -27,11 +27,11 @@ export default function Hero() {
           {siteMeta.name}
         </h1>
         <p className="!font-poppins mt-2 text-[#F9C6CF] pl-1 font-bold rounded">
-              Electrical Engineering & Computer Science + Bioengineering @ UC Berkeley
+              Electrical Engineering & Computer Science + Bioengineering <br /> @ UC Berkeley
             </p>
         
         {/* adjust the contact logos */}
-        <div className="flex flex-row mt-9 pl-5 space-x-3">
+        <div className="flex flex-row mt-6 pl-5 space-x-3">
           <div className="bg-white p-1 rounded-full">
             <a
               href={siteMeta.linkedin}

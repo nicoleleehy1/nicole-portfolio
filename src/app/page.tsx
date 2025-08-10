@@ -60,7 +60,7 @@ export default function Home() {
             {/* Intro Card + Image */}
             <div className="absolute top-0 w-full h-full flex items-center justify-start z-10">
               {/* IntroCard side */}
-              <div className="w-[65%] flex items-stretch">
+              <div className="w-[63%] flex items-stretch">
                 <motion.div
                   className="w-full h-full"
                   initial={{ x: -1000 }}
@@ -72,12 +72,19 @@ export default function Home() {
               </div>
 
               {/* Image side */}
-              <div className="w-[35%] flex items-stretch justify-center mt-[-6rem]">
-                <img
+              <div className="w-[33%] flex items-stretch justify-center mt-[-6rem]">
+              <motion.div
+                  className="w-full h-full"
+                  initial={{ x: 1000 }}
+                  animate={{ x: 30 }}
+                  transition={{ duration: 1 }}
+                >
+                  <img
                   src="/headshot-cropped.jpg"
                   alt="Headshot"
                   className="object-cover object-center rounded-[10px] w-[80%] h-full"
-                />
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
