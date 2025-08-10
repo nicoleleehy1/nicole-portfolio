@@ -49,7 +49,6 @@ export default function Home() {
         style={{ position: "relative", zIndex: 1 }}
         className="flex flex-col gap-4 items-center w-full"
       >
-        <Hero />
 
         <section
           id="hero"
@@ -64,7 +63,7 @@ export default function Home() {
             />
 
             {/* Intro Card positioned absolutely on top of image */}
-            <div className="absolute top-0 left-0 w-[60%] h-full flex items-center justify-start z-10">
+            <div className="absolute top-0 left-0 w-[65%] h-full flex items-center justify-start z-10">
               <motion.div
                 initial={{ x: -1000 }}
                 animate={{ x: 0 }}
