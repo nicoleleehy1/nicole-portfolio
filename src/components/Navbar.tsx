@@ -51,26 +51,38 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-13">
             <div className="flex items-center space-x-3">
+              <a href={`#hero`}>
               <span className={`!font-poppins font-semibold text-lg transition-colors ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               }`}>
                 Nicole Lee
               </span>
+              </a>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
               {['About', 'Experience', 'Projects', 'Leadership'].map((item) => (
                 <a
                   key={item}
-                  href={`${item.toLowerCase()}`}
+                  href={`#${item.toLowerCase()}`}
                   className={`font-medium transition-colors ${
-                    isScrolled ? 'text-gray-700 hover:text-pink-600' : 'text-white hover:text-pink-200'
+                    isScrolled ? 'text-gray-700 hover:text-red-600' : 'text-white hover:text-pink-200'
                   }`}
                 >
                   {item}
                 </a>
               ))}
-              <a href={siteMeta.resumePath} download className="ml-2 inline-block px-3 py-1 rounded-md border text-white">Resume</a>
+              <a href={siteMeta.resumePath} download
+                className={`ml-2 inline-block px-3 py-1 rounded-md border transition-colors
+                  ${
+                    isScrolled
+                      ? 'text-black border-black hover:text-red-600 hover:border-red-600'
+                      : 'text-white border-white hover:text-pink-200 hover:border-pink-200'
+                  }`}
+              >
+                Resume
+              </a>
+
             </div>
           </div>
         </div>
