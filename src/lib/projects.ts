@@ -24,21 +24,17 @@ interface Experience {
   link?: string;
 }
 
+
+
 export const projects: Project[] = [
   {
     id: 'project-1',
-    title: 'E-Commerce Platform',
+    title: 'Insurmate',
     technologies: ['React', 'TypeScript', 'Java', 'Spring Boot', 'PostgreSQL'],
-    description: 'A full-featured e-commerce platform with user authentication, product management, shopping cart, and payment processing.',
+    description: 'An AI-powered insurance assistant that simplifies buying, understanding, and managing insurance through natural conversation.',
     longDescription: `
-      This comprehensive e-commerce solution was built to handle high-traffic scenarios while maintaining excellent user experience. 
-      The frontend utilizes React with TypeScript for type safety and better developer experience, while the backend is powered by 
-      Java Spring Boot providing robust REST APIs.
-
-      Key features include user authentication with JWT tokens, advanced product filtering and search, real-time inventory management, 
-      secure payment processing with Stripe integration, and an admin dashboard for order and product management.
-
-      The application follows microservices architecture patterns and implements caching strategies for optimal performance.
+      Integrated GPT-4o, LangChain and insurance APIs with a custom-built insurance agent. 
+      Integrated real-time insurance APIs, web scraping, and a quote simulation engine to provide personalized, data-driven recommendations.
     `,
     images: ['/project1-1.jpg', '/project1-2.jpg', '/project1-3.jpg'],
     liveUrl: 'https://example-ecommerce.com',
