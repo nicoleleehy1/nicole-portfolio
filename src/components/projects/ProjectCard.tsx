@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <DialogTrigger asChild>
         <div
           className={`
-            bg-white rounded-2xl p-3 shadow-lg cursor-pointer
+            bg-white rounded-2xl p-3 pb-5 shadow-lg cursor-pointer
             transition-all duration-300 ease-in-out
             ${isHovered ? 'transform scale-105 shadow-2xl' : ''}
             hover:shadow-2xl
@@ -77,17 +77,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
 
           {/* Hover indicator */}
-          <div className={`
+          {/* <div className={`
             mt-4 text-sm text-blue-600 font-medium
             transition-opacity duration-300
             ${isHovered ? 'opacity-100' : 'opacity-0'}
           `}>
             Click to view details →
-          </div>
+          </div> */}
         </div>  
       </DialogTrigger>
 
-      <DialogContent className="!max-w-4xl !p-0 overflow-hidden rounded-xl shadow-xl dark:bg-slate-800 bg-white max-h-[90vh]">
+      <DialogContent className="!max-w-4xl !p-0 overflow-hidden rounded-xl shadow-xl dark:bg-slate-800 bg-white max-h-[100vh]">
         <div className="relative">
           {/* Close Button */}
           {/* <Dialog.Close asChild>
@@ -99,7 +99,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </Dialog.Close> */}
 
           {/* Project Image */}
-          <div className="relative h-64 md:h-80">
+          <div className="relative h-80 md:h-90">
             <img
               src={project.image}
               alt={project.title}

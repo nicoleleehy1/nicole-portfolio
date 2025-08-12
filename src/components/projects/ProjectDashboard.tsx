@@ -29,41 +29,41 @@ const Projects: Project[] = [
     {
       id: 'project-1',
       title: 'Insurance Pal - Bolt Hacks 2025',
-      technologies: ['React', 'TypeScript', 'Java'],
-      description: 'A scalable web application with robust architecture',
+      technologies: ['Typescript', 'Next.js', 'Tailwind', 'Supabase', 'PostgreSQL', 'Bolt'],
+      description: 'An AI insurance assistant to automate claims, quotes, document parsing and personalized policy advice.',
       image: './gallery/insurmate-1.png'
     },
     {
       id: 'project-2',
       title: 'Tabitha - AgentHacks 2025',
-      technologies: ['React', 'TypeScript', 'Java'],
-      description: 'An innovative solution for complex problems',
+      technologies: ['Typescript', 'Next.js', 'TailwindCSS', 'GPT-4.0'],
+      description: 'A Chrome extension that organizes and provides insights for most frequently viewed tabs.',
       image: './gallery/propriologics.jpeg'
     },
     {
       id: 'project-3',
       title: 'ASL Translator - TreeHacks 2025',
-      technologies: ['React', 'TypeScript', 'Java'],
-      description: 'A full-stack application built with modern technologies',
+      technologies: ['Python', 'React', 'OpenCV', 'MediaPipe', 'Tensorflow.js'],
+      description: 'ASL hand gesture recognition and live captions integrated into an AI chatbot for nonverbal users',
       image: './berkeley-dashboard.png'
     },
     {
       id: 'project-4',
       title: 'School Dashboard',
-      technologies: ['React', 'TypeScript', 'Java'],
+      technologies: ['Typescript', 'Next.js', 'TailwindCSS'],
       description: 'Mobile-first responsive design with great UX'
     },
     {
       id: 'project-5',
-      title: 'Finance Tracker',
-      technologies: ['React', 'TypeScript', 'Java'],
-      description: 'Data visualization and analytics dashboard'
+      title: 'Hong Kong Cafe Game',
+      technologies: ['Java', 'TypeScript', 'Java'],
+      description: 'Hot pineapple buns and milk lattes...'
     },
     {
       id: 'project-6',
-      title: 'Rewhere - Technovation 2020',
-      technologies: ['React', 'TypeScript', 'Java'],
-      description: 'E-commerce platform with payment integration'
+      title: 'Rewhere - Technovation Girls',
+      technologies: ['React Native', 'Adobe XD', 'Javascript'],
+      description: 'An iOS app incentivizing clothing donation; mapped 400+ clothing banks in Hong Kong using gov. APIs'
     },
     {
       id: 'project-7',
@@ -125,7 +125,7 @@ const ProjectDashboard: React.FC<ProjectDashboardProps> = ({ projects = [], star
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br p-8 rounded-2xl">
+    <div className="bg-gradient-to-br p-8 rounded-2xl">
       <div className="max-w-7xl mx-auto">
         
         {/* Projects Grid */}
