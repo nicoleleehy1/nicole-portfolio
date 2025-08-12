@@ -28,7 +28,7 @@ export default function Hero() {
         </h1>
         <p className="!font-poppins mt-2 text-[#F9C6CF] pl-1 font-bold rounded">
               Electrical Engineering & Computer Science + Bioengineering <br /> @ UC Berkeley
-            </p>
+        </p>
         
         {/* adjust the contact logos */}
         <div className="flex flex-row mt-6 pl-5 space-x-3">
