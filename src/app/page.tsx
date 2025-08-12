@@ -12,14 +12,14 @@ import ProjectDashboard from "@/components/projects/ProjectDashboard";
 import DraggableImage from "@/components/DraggableImage";
 import { ChevronDown } from 'lucide-react';
 import ExperiencesPage from '@/components/ExperiencesPage';
-import BasicInfo from '@/components/hero/BasicInfo';
-import IntroCard from '@/components/IntroCard';
+import IntroCard from '@/components/hero/IntroCard';
 import AboutMe from '@/components/hero/AboutMe';
 import TechStack from '@/components/TechStack';
 import ScrollingGallery from '@/components/ScrollingGallery';
 import Highlights from '@/components/Highlights';
 import Navbar from '@/components/Navbar';
 import ResizableBackground from '@/components/ResizableBackground';
+import StarButton from '@/components/hero/Star';
 
 
 
@@ -44,13 +44,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full flex bg-[#470D03] relative">
+      <Navbar theme="light" />
       <main
         style={{ position: "relative", zIndex: 1 }}
-        className="flex flex-col gap-4 items-center w-full"
+        className="flex flex-col gap-8 items-center w-full"
       >
         {/* HERO SECTION */}
-        <section id="hero" className="relative w-full min-h-[805px] overflow-visible pb-[350px]">
-          <div className="relative w-full h-[750px]">
+        <section id="hero" className="relative w-full overflow-hidden">
+          <div className="relative w-full">
             <img
               src="/intro/intro-background.svg"
               alt=""
@@ -90,46 +91,57 @@ export default function Home() {
           </div>
         </section>
 
-      <section id="about" className='flex'>
-        {/* ABOUT ME */}
-        <div className='w-[1/3] pl-10'><AboutMe /></div>
-        {/* TECH STACK */}
-        <div className='w-[2/3] pr-10'><TechStack /></div>
-      </section>
 
-      {/* Scroll Highlights Gallery */}
-      <section id="highlights">
-        <Highlights />
+      {/* About */}
+      <section id="about" className='flex'>
+        <div className='w-[1/3] pl-10'><AboutMe /></div>
+        <div className='w-[2/3] pr-10'><TechStack /></div>
       </section>
 
 
       {/* Projects Dashboard */}
-      <div>
-        {/* Header */}
-        <h1 className="w-[1200px] !font-poppins italic text-5xl font-extrabold text-white mb-12 pt-7 flex items-center">
-          📌
-          {startTyping && (
-            <TypeAnimation
-              sequence={['Selected Works.']}
-              wrapper="span"
-              speed={50}
-              style={{ display: 'inline-block' }}
-            />
-          )}
-        </h1>
-        <div ref={ref}><ProjectDashboard startTyping={startTyping} maxProjects={3}/></div>
-      </div>
+      <section id="projects">
+        <div>
+          {/* Header */}
+          <h1 className="w-[1200px] !font-poppins text-5xl font-extrabold text-white flex items-center">
+            {startTyping && (
+              <TypeAnimation
+                sequence={['📌 Selected Works.']}
+                wrapper="span"
+                speed={50}
+                style={{ display: 'inline-block' }}
+              />
+            )}
+          </h1>
+          <div ref={ref} className='items-center flex flex-col gap-1'>
+            <ProjectDashboard startTyping={startTyping} maxProjects={3}/>
+            <button className="!font-poppins w-[250px] h-[40px] bg-[#F9C6CF] rounded-[29.5px] text-center justify-start text-[#bd1f20] font-semibold">See All Projects →</button>
+          </div>
+        </div>
+      </section>
 
+      <section id="experience">
+        <ExperiencesPage />
+      </section>
+
+
+      {/* Highlights Gallery */}
+      <section id="highlights">
+        <Highlights />
+      </section>
       
       
 
+      
+    
       {/* Scroll Indicator
       <section className="pt-32 pb-20 px-6">
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-6 h-6 text-gray-400" />
         </div>
       </section> */}
-        {/* <DraggableImage
+
+      {/* <DraggableImage
           src="/hello-kitty-sticker.png"
           alt="Hello Kitty"
           initialX={150}
