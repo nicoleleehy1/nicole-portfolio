@@ -43,6 +43,16 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        keyframes: {
+          shimmer: {
+            "0%": { transform: "translateY(0) rotate(0deg)" },
+            "50%": { transform: "translateY(-4px) rotate(10deg)" },
+            "100%": { transform: "translateY(0) rotate(0deg)" },
+          },
+        },
+        animation: {
+          shimmer: "shimmer 0.4s ease-in-out",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
