@@ -142,7 +142,7 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
             <section>
               <h3 className="text-lg font-bold text-gray-900 mb-4">Key Features</h3>
               <ul className="space-y-2">
-                {project.features.map((feature, index) => (
+                {project.features?.map((feature, index) => (
                   <li key={index} className="flex items-start">
                     <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span className="text-gray-600 text-sm">{feature}</span>
