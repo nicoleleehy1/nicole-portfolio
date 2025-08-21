@@ -9,8 +9,11 @@ interface ProjectDetailProps {
 }
 
 
-export default function ProjectDetail({ params }: ProjectDetailProps) {
-  
+export default function ProjectDetail({
+  params,
+}: {
+  params: { id: string };
+}) {
   const project = getProjectData(params.id);
 
   if (!project) {
