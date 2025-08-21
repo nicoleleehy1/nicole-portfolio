@@ -35,9 +35,9 @@ const Projects: Project[] = [
     },
     {
       id: 'project-2',
-      title: 'Tabitha - AgentHacks 2025',
-      technologies: ['Typescript', 'Next.js', 'TailwindCSS', 'GPT-4.0'],
-      description: 'A Chrome extension that organizes and provides insights for most frequently viewed tabs.',
+      title: 'Propriologics',
+      technologies: ['Typescript', 'Next.js', 'TailwindCSS', 'Shadcn UI', 'Supabase', 'AWS EC2, S3'],
+      description: 'A full-stack web platform that helps clinicians monitor patient posture in real time and personalize rehabilitation by combining wearable telemetry, computer vision models, and secure data management.',
       image: './gallery/propriologics.jpeg'
     },
     {
@@ -45,34 +45,41 @@ const Projects: Project[] = [
       title: 'ASL Translator - TreeHacks 2025',
       technologies: ['Python', 'React', 'OpenCV', 'MediaPipe', 'Tensorflow.js'],
       description: 'ASL hand gesture recognition and live captions integrated into an AI chatbot for nonverbal users',
-      image: './berkeley-dashboard.png'
+      image: './asl-translator-2.png'
     },
     {
       id: 'project-4',
+      title: 'Tabitha - AgentHacks 2025',
+      technologies: ['Typescript', 'Next.js', 'TailwindCSS', 'GPT-4.0'],
+      description: 'A Chrome extension that organizes and provides insights for most frequently viewed tabs.',
+      image: './gallery/propriologics.jpeg'
+    },
+    {
+      id: 'project-5',
       title: 'School Dashboard',
       technologies: ['Typescript', 'Next.js', 'TailwindCSS'],
       description: 'Mobile-first responsive design with great UX'
     },
     {
-      id: 'project-5',
+      id: 'project-6',
       title: 'Hong Kong Cafe Game',
       technologies: ['Java', 'TypeScript', 'Java'],
       description: 'Hot pineapple buns and milk lattes...'
     },
     {
-      id: 'project-6',
+      id: 'project-7',
       title: 'Rewhere - Technovation Girls',
       technologies: ['React Native', 'Adobe XD', 'Javascript'],
       description: 'An iOS app incentivizing clothing donation; mapped 400+ clothing banks in Hong Kong using gov. APIs'
     },
     {
-      id: 'project-7',
+      id: 'project-8',
       title: 'Webinet - Young Founders',
       technologies: ['React', 'TypeScript', 'Java'],
       description: 'E-commerce platform with payment integration'
     },
     {
-      id: 'project-8z',
+      id: 'project-9',
       title: 'Flame - HKTDC Entrepreneur Day',
       technologies: ['React', 'TypeScript', 'Java'],
       description: 'E-commerce platform with payment integration'
