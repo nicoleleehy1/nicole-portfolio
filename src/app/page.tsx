@@ -20,6 +20,7 @@ import Highlights from '@/components/Highlights';
 import Navbar from '@/components/Navbar';
 import ResizableBackground from '@/components/ResizableBackground';
 import StarButton from '@/components/hero/Star';
+import Footer from '@/components/Footer';
 
 
 
@@ -115,7 +116,7 @@ export default function Home() {
           </h1>
           <div ref={ref} className='items-center flex flex-col gap-1'>
             <ProjectDashboard startTyping={startTyping} maxProjects={3}/>
-            <button className="!font-poppins w-[250px] h-[40px] bg-[#F9C6CF] rounded-[29.5px] text-center justify-start text-[#bd1f20] font-semibold">See All Projects →</button>
+            {/* <button className="!font-poppins w-[250px] h-[40px] bg-[#F9C6CF] rounded-[29.5px] text-center justify-start text-[#bd1f20] font-semibold">See All Projects →</button> */}
           </div>
         </div>
       </section>
@@ -129,7 +130,6 @@ export default function Home() {
       <section id="highlights">
         <Highlights />
       </section>
-      
       
 
       
@@ -149,8 +149,8 @@ export default function Home() {
           width={80}
           height={80}
         /> */}
+        <Footer />
       </main>
-      
     </div>
   );
 };

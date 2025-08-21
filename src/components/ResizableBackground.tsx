@@ -1,10 +1,14 @@
 import React from "react";
 
-const ResizableBackground: React.FC = () => {
+interface ResizableBackgroundProps {
+    backgroundLink: string;
+}
+
+const ResizableBackground: React.FC<ResizableBackgroundProps> = ({backgroundLink}) => {
   return (
     <div className="background-container">
       <img
-        src="/gallery/insurmate-1.png"
+        src={backgroundLink}
         alt="Background"
         className="background-image"
       />
