@@ -16,14 +16,14 @@ export default function Hero() {
           absolute
           w-[70%]         /* same scale as GIF */
           max-w-[60rem]   /* prevent too large */
-          left-[25%]      /* match horizontal GIF offset */
-          top-[15%]      /* match vertical GIF offset */
+          left-[18%]      /* match horizontal GIF offset */
+          top-[18%]      /* match vertical GIF offset */
           flex flex-col
           text-left
         "
       >
         <p className="mt-2 text-[#DC8282] font-bold">Hello! I'm</p>
-        <h1 className="text-4xl md:text-8xl font-extrabold text-white">
+        <h1 className="text-3xl md:text-8xl font-extrabold text-white">
           {siteMeta.name}
         </h1>
         <p className="!font-poppins mt-2 text-[#F9C6CF] pl-1 font-bold rounded">
@@ -31,7 +31,7 @@ export default function Hero() {
         </p>
         
         {/* adjust the contact logos */}
-        <div className="flex flex-row mt-6 pl-5 space-x-3">
+        <div className="flex flex-row mt-6 space-x-3">
           <div className="bg-white p-1 rounded-full">
             <a
               href={siteMeta.linkedin}

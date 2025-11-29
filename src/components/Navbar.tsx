@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              {['About', 'Experience', 'Projects', 'Leadership'].map((item) => (
+              {['About', 'Experience', 'Projects'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}

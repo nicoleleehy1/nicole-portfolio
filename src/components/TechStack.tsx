@@ -31,7 +31,7 @@ const TechStack = () => {
         </h1>
 
         {/* Skills Section */}
-        <div className="flex flex-col gap-3 ml-1">
+        <div className="flex flex-col gap-3">
           {/* Languages */}
           <div className="rounded-[10px] p-3 bg-white">
             <h2 className="font-semibold text-sm mb-1">Languages</h2>
@@ -63,7 +63,7 @@ const TechStack = () => {
           </div>
 
           {/* Tools */}
-          <div className="rounded-[10px] p-3 bg-white">
+          <div className="rounded-[10px] border p-3 bg-white">
             <h2 className="font-semibold text-sm mb-1">Tools</h2>
             <div className="flex flex-wrap gap-1.5">
               {technicalSkills.tools.map((tool) => (

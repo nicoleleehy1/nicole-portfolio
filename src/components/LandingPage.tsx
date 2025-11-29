@@ -78,7 +78,7 @@ const LandingPage: React.FC = () => {
   return (
     <div 
       ref={containerRef}
-      className="min-h-screen bg-white relative overflow-hidden"
+      className="max-w-5xl mx-auto bg-white relative overflow-hidden"
       style={{ cursor: draggedItem ? 'grabbing' : 'default' }}
     >
       {/* Photo Grid */}

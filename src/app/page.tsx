@@ -60,36 +60,37 @@ export default function Home() {
             />
 
             {/* Intro Card + Image */}
-            <div className="absolute top-0 w-full h-full flex items-center justify-start z-10">
-              {/* IntroCard side */}
-              <div className="w-[63%] flex items-stretch">
+            <div className="absolute top-0 w-full h-full flex justify-center items-center z-10">
+              <div className="flex w-full max-w-6xl gap-10 items-center justify-between flex-row pb-[10%]">
+
+                {/* IntroCard side */}
                 <motion.div
-                  className="w-full h-full"
-                  initial={{ x: -1000 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 1 }}
+                  className="flex-1 min-w-[63%]"
+                  initial={{ x: -200, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.9 }}
                 >
                   <IntroCard />
                 </motion.div>
-              </div>
 
-              {/* Image side */}
-              <div className="w-[33%] flex items-stretch justify-center mt-[-6rem]">
-              <motion.div
-                  className="w-full h-full"
-                  initial={{ x: 1000 }}
-                  animate={{ x: 30 }}
-                  transition={{ duration: 1 }}
+                {/* Image side */}
+                <motion.div
+                  className="justify-center"
+                  initial={{ x: 200, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.9 }}
                 >
                   <img
-                  src="/headshot-cropped.jpg"
-                  alt="Headshot"
-                  className="object-cover object-center rounded-[10px] w-[80%] h-full"
+                    src="/headshot-cropped.jpg"
+                    alt="Headshot"
+                    className="rounded-xl max-h-[365px]"
                   />
                 </motion.div>
+
               </div>
             </div>
-          </div>
+            </div>
+
         </section>
 
 
