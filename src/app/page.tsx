@@ -95,7 +95,7 @@ export default function Home() {
 
 
       {/* About */}
-      <section id="about" className='flex'>
+      <section id="about" className='flex gap-10'>
         <div className='w-[1/3] pl-10'><AboutMe /></div>
         <div className='w-[2/3] pr-10'><TechStack /></div>
       </section>
@@ -108,7 +108,7 @@ export default function Home() {
           <h1 className="w-[1200px] !font-poppins text-5xl font-extrabold text-white flex items-center">
             {startTyping && (
               <TypeAnimation
-                sequence={['📌 Selected Works.']}
+                sequence={['🖇 selected works.']}
                 wrapper="span"
                 speed={50}
                 style={{ display: 'inline-block' }}

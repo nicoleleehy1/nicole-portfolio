@@ -9,16 +9,16 @@ const AboutMe = () => {
           w-[70%]         /* same scale as GIF */
           max-w-[60rem]   /* prevent too large */
           left-[17%]      /* match horizontal GIF offset */
-          top-[38%]      /* match vertical GIF offset */
+          top-[43%]      /* match vertical GIF offset */
           flex flex-col
           text-left
         "
       >
         <h1 className="text-4xl md:text-6xl font-extrabold text-[#B61E1D]">
-          About Me.
+          about me.
         </h1>
         <p className="!font-poppins mt-2 text-[#000000] pl-1 rounded">
-        I’m a second-year Electrical Engineering & Computer Science (EECS) and Bioengineering double major at UC Berkeley, passionate about building software that drives social impact. With experience in full-stack development, I love creating solutions that bridge technology and real-world needs.        </p>
+        I’m a second-year Electrical Engineering & Computer Science (EECS) and Bioengineering double major at UC Berkeley, passionate about building software that drives social impact.        </p>
       </div>
     </div>
   )
