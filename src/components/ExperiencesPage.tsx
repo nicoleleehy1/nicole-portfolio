@@ -66,7 +66,7 @@ export default function ExperienceSection() {
           {experiences.map((_, index) => (
             <button
               key={index}
-              className="w-4 h-4 rounded-full bg-white flex items-center justify-center"
+              className="w-4 h-4 rounded-full border-2 flex items-center justify-center"
               onClick={() => {
                 const element = cardRefs.current[index];
                 if (element) {
@@ -84,7 +84,7 @@ export default function ExperienceSection() {
               }}
             >
               {activeIndex === index && (
-                <img src={"/globe.svg"} alt="Leaf" className="w-5 h-5" />
+                <img src={"/sidebar-star.svg"} alt="sidebar" className="w-5 h-5" />
               )}
             </button>
           ))}
@@ -93,10 +93,7 @@ export default function ExperienceSection() {
       
 
       <div>
-        <h1 className="!font-poppins text-5xl font-bold text-white">
-          Experience
-        </h1>
-        <div className="mt-6 space-y-6">
+        <div className="space-y-6">
           {experiences.map((exp, i) => (
             <article
               key={exp.company}
