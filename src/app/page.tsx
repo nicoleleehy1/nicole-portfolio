@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { TypeAnimation } from 'react-type-animation';
+import { projects } from "@/lib/projects";
 
 
 import Image from "next/image";
@@ -101,14 +102,14 @@ export default function Home() {
       </section>
 
 
-      {/* Projects Dashboard */}
-      <section id="projects">
-        <div>
+      {/* Featured Projects */}
+      <section id="projects" className="w-full flex justify-center mt-10">
+        <div className='w-[85%] mx-auto'>
           {/* Header */}
-          <h1 className="w-[1200px] !font-poppins text-5xl font-extrabold text-white flex items-center">
+          <h1 className="!font-poppins text-5xl font-extrabold text-white flex items-center ">
             {startTyping && (
               <TypeAnimation
-                sequence={['🖇 selected works.']}
+                sequence={['selected works.']}
                 wrapper="span"
                 speed={50}
                 style={{ display: 'inline-block' }}
@@ -116,13 +117,16 @@ export default function Home() {
             )}
           </h1>
           <div ref={ref} className='items-center flex flex-col gap-1'>
-            <ProjectDashboard startTyping={startTyping} maxProjects={3}/>
-            {/* <button className="!font-poppins w-[250px] h-[40px] bg-[#F9C6CF] rounded-[29.5px] text-center justify-start text-[#bd1f20] font-semibold">See All Projects →</button> */}
+            <ProjectDashboard projects={projects} limit={3} />
+            <button className="!font-poppins px-5 h-[2rem] bg-[#F9C6CF] rounded-full text-center justify-start text-[#bd1f20] font-semibold mt-5">See All Projects →</button>
           </div>
         </div>
       </section>
 
       <section id="experience">
+        <h1 className="!font-poppins text-5xl font-bold text-white w-full flex justify-center mt-15">
+          experience.
+        </h1>
         <ExperiencesPage />
       </section>
 
