@@ -118,7 +118,12 @@ export default function Home() {
           </h1>
           <div ref={ref} className='items-center flex flex-col gap-1'>
             <ProjectDashboard projects={projects} limit={3} />
-            <button className="!font-poppins px-5 h-[2rem] bg-[#F9C6CF] rounded-full text-center justify-start text-[#bd1f20] font-semibold mt-5">See All Projects →</button>
+            <Link href="/projects">
+              <button className="!font-poppins px-5 h-[2rem] bg-[#F9C6CF] rounded-full text-center 
+                                justify-start text-[#bd1f20] font-semibold mt-5">
+                    See All Projects →
+              </button>
+            </Link>
           </div>
         </div>
       </section>

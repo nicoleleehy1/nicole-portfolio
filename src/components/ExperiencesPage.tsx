@@ -58,11 +58,11 @@ export default function ExperienceSection() {
   return (
     <section
       ref={setRefs}
-      className="relative max-w-7xl mx-auto px-6 py-12 flex flex-row"
+      className="relative max-w-6xl mx-auto px-6 py-12 flex flex-row"
     >
       {/* Sidebar */}
       {showSidebar && (
-        <div className="fixed left-15 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
+        <div className="fixed left-15 top-1/2 flex flex-col gap-3 z-50">
           {experiences.map((_, index) => (
             <button
               key={index}
